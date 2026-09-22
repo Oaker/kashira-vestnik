@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>КА-ШИ-РА ВЕСТНИК — киоск</title>
+<style>
+  :root{
+    --ink:#1c1a16; --ink-soft:#4a443a; --deep:#141210;
+    --paper:#ece2cd; --paper-dark:#dccdb0; --verm:#b4371f;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:#3a372f}
+  body{width:100%;max-width:1100px;margin:0 auto;color:var(--ink);
+       font-family:"Constantia",Georgia,serif}
+  header.head{padding:40px 26px 18px;text-align:center}
+  .kicker{font-family:"Franklin Gothic Medium",Impact,Georgia,serif;font-size:14px;letter-spacing:.2em;
+          text-transform:uppercase;color:#d9c9a8;margin:0 0 12px}
+  h1.mast{font-family:Impact,"Franklin Gothic Medium",Georgia,serif;font-size:clamp(38px,7vw,80px);
+          line-height:.96;margin:0;letter-spacing:-.5px;color:#f2e8d3;text-transform:uppercase}
+  h1.mast em{font-style:normal;color:#c2452a}
+  .sub{color:#cbbfa5;font-style:italic;margin:12px 0 0;font-size:16px}
+  .rule{border-top:4px solid #efe5cf;margin:22px 0 0}
+  main{padding:0 26px 60px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:22px;margin-top:28px}
+  .card{background:var(--paper);border:4px solid var(--deep);border-radius:3px;overflow:hidden;
+        display:flex;flex-direction:column;text-decoration:none;color:var(--ink);
+        transition:transform .12s ease, box-shadow .12s ease}
+  .card:hover{transform:translateY(-3px);box-shadow:6px 8px 0 rgba(0,0,0,.35)}
+  .card .thumb{display:block;width:100%;height:300px;object-fit:cover;object-position:top center;
+        border-bottom:4px solid var(--deep);background:#dccdb0}
+  .card .body{padding:14px 16px 18px;display:flex;flex-direction:column;gap:6px;flex:1 1 auto}
+  .card .no{font-family:Impact,"Franklin Gothic Medium",serif;font-size:26px;color:var(--verm);
+        letter-spacing:.02em;text-transform:uppercase;line-height:1.05}
+  .card .date{font-family:"Franklin Gothic Medium",Impact,serif;font-size:12px;letter-spacing:.14em;
+        text-transform:uppercase;color:var(--ink-soft)}
+  .card .desc{font-size:15px;line-height:1.45;margin:4px 0 0}
+  .card .go{margin-top:auto;font-family:"Franklin Gothic Medium",Impact,serif;font-size:13px;
+        letter-spacing:.14em;text-transform:uppercase;color:var(--verm)}
+  .empty{border:3px dashed #b9ab8e;border-radius:4px;padding:26px;color:#cbbfa5;text-align:center;
+        font-style:italic;margin-top:22px}
+  .hint{background:rgba(236,226,205,.10);border-left:4px solid var(--verm);padding:12px 16px;margin-top:32px;
+        color:#d9cfb6;font-size:14px;line-height:1.55}
+  .hint b{color:#f2e8d3}
+  code{background:rgba(0,0,0,.35);padding:2px 6px;border-radius:4px;font-size:12.5px;color:#f0e6d2}
+  footer{border-top:4px solid #efe5cf;margin:0 26px;padding:16px 0 40px;color:#b7ab92;font-size:13.5px;
+         display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  footer b{color:#c2452a;font-family:Impact,serif;letter-spacing:.06em}
+</style>
+</head>
+<body>
+
+<header class="head">
+  <p class="kicker">газета недвойственного жонглирования</p>
+  <h1 class="mast">КА-ШИ-РА <em>ВЕСТНИК</em></h1>
+  <p class="sub">Киоск · все выпуски · один автор и шесть голосов</p>
+  <div class="rule"></div>
+</header>
+
+<main>
+  <div class="grid">
+
+    <!-- ============================================================
+         НОВЫЙ ВЫПУСК: скопируйте блок <a class="card"> … </a> целиком,
+         поменяйте номер, дату, описание и ссылку на папку выпуска.
+         ============================================================ -->
+    <a class="card" href="issues/issue-1/index.html">
+      <img class="thumb" src="issues/issue-1/cover.jpg" alt="Обложка выпуска №1">
+      <div class="body">
+        <div class="no">Выпуск №1</div>
+        <div class="date">сентябрь 2026</div>
+        <p class="desc">Карманный канон для неофитов: каширский шиваизм, шесть голосов, шивометр на 91 и объявление о сдаче угла в Каширском лесу.</p>
+        <div class="go">Читать выпуск →</div>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- Если выпусков станет много, карточки просто добавляются в .grid выше -->
+
+  <div class="hint">
+    <b>Как выпустить следующий номер:</b> скопируйте папку <code>template/</code> в <code>issues/issue-2/</code>,
+    положите туда свою газету как <code>index.html</code>, картинки — в <code>assets/comic/</code>,
+    обложку — в <code>cover.jpg</code>. Затем добавьте в <code>index.html</code> вторую карточку по образцу первой.
+    Подробно — в <code>README.md</code>.
+  </div>
+</main>
+
+<footer>
+  <span>Редакция — берег Оки, Кашира</span>
+  <span><b>Код = Мантра</b></span>
+</footer>
+
+</body>
+</html>
