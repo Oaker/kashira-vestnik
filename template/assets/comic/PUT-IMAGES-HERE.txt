@@ -1,0 +1,5 @@
+Put issue images here (jpg/png).
+
+Reference them in index.html as:  assets/comic/your-file.jpg
+
+Keep each image under ~500 KB, use latin file names without spaces.
